@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>    
+    <body>
+        <header class="content__container">
+            <div class="content__wrapper">
+                <div class="content__wrapper-item">
+                    <a class="content__logo" href="https://yandex.ru/">SkillDrive</a>
+                </div>
+                <div class="content__wrapper-item is-desktop">
+                    <nav class="menu__frame">
+                        <a class="menu__frame-link is-animated" href="">О нас</a>
+                        <a class="menu__frame-link is-animated" href="">Условия</a>
+                        <a class="menu__frame-link is-animated" href="">Частые вопросы</a>
+                    </nav>
+                </div>
+                <div class="content__wrapper-item is-desktop">
+                    <button class="content-button is-animated"><span class="content-button-text">Войти</span></button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="about__frame">
+                <div class="content__container is-aline-center">
+                    <img src="./img/main.svg" alt="main image" class="about__frame-img is-desktop">
+                    <img src="./img/mainMobile.svg" alt="main image" class="is-mobile">
+                    <h1 class="about__frame-maintitle">Частые вопросы</h1>
+                    <div class="about__frame-text">
+                        <p>Отвечаем на вопросы, которые у вас могут возникнуть.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="question__frame">
+                <div class="content__container is-aline-center">
+                    <button class="accordion">Могу ли я отменить бронь?</button>
+                    <div class="panel"></div>
+                    <button class="accordion">Могу ли я вернуть деньги, если не подошёл автомобиль?</button>
+                    <div class="panel"></div>
+                    <button class="accordion">Что делать, если случилось ДТП?</button>
+                    <div class="panel"></div>
+                    <button class="accordion">Могу ли я оставить автомобиль в удобном для меня месте?</button>
+                    <div class="panel"><p>Данный вопрос обсуждается с собственником, но как правило автомобиль нужно вернуть туда, где вы его получили.</p></div>
+                    <button class="accordion">Что делать, если собственник просит заплатить ему напрямую?</button>
+                    <div class="panel"></div>
+                    <button class="accordion">Должен ли я заправлять автомобиль?</button>
+                </div>
+                
+            </section>
+            
+        </main>
+        <footer class="footer__frame">
+            <div class="content__container">
+                <div class="footer__frame-wrapper">
+                    <div>
+                        <img class="footer__frame-copyright" src="./img/copyright.svg" alt="">
+                    </div>
+                    <div class="footer__frame-socmedia">
+                        <div>
+                            <a class="footer__frame-item" href="https://www.instagram.com/skilldriveorg/?hl=ru"
+                                aria-label="You can find vk profile here">
+                                <img src="./img/vk_icon.svg" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a class="footer__frame-item" href="https://www.instagram.com/skilldriveorg/?hl=ru"
+                                aria-label="You can find instagram profile here">
+                                <img src="./img/instagram_icon.svg" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a class="footer__frame-item" href="https://www.instagram.com/skilldriveorg/?hl=ru"
+                                aria-label="You can find facebook profile here">
+                                <img src="./img/facebook_icon.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++){
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+</body>
